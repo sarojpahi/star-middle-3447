@@ -10,7 +10,6 @@ import {
   Slide,
   Text,
   useDisclosure,
-  VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";

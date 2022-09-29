@@ -58,8 +58,9 @@ export const PhoneAuth = () => {
       <VStack
         align={"center"}
         w="360px"
-        gap={2}
+        gap={[0, 0, 0, 2, 2, 2]}
         display={takeName ? "none" : "flex"}
+        px={2}
       >
         <FormControl isInvalid={isError}>
           <InputGroup>
@@ -80,21 +81,22 @@ export const PhoneAuth = () => {
           )}
         </FormControl>
         <Box id="recaptcha-container" />
-        <Button
-          onClick={submitNumber}
-          borderRadius="100%"
-          w="60px"
-          h="60px"
-          bg={"#008ecc"}
-          color="white"
-          fontWeight={"bold"}
-          fontSize="40px"
-          _hover={{ bg: "#008ecc" }}
-          display={show ? "flex" : "none"}
-        >
-          <VscChevronRight />
-        </Button>
-        <VStack w="full" display={show ? "none" : "block"}>
+        <Box h="80px" display={show ? "flex" : "none"}>
+          <Button
+            onClick={submitNumber}
+            borderRadius="100%"
+            w="60px"
+            h="60px"
+            bg={"#008ecc"}
+            color="white"
+            fontWeight={"bold"}
+            fontSize="40px"
+            _hover={{ bg: "#008ecc" }}
+          >
+            <VscChevronRight />
+          </Button>
+        </Box>
+        <VStack w="full" display={show ? "none" : "block"} gap={3}>
           <FormControl>
             <InputGroup>
               <Input
@@ -105,37 +107,41 @@ export const PhoneAuth = () => {
               />
             </InputGroup>
           </FormControl>
-          <Button
-            w="full"
-            onClick={verifyOtp}
-            bg={"#008ecc"}
-            color="white"
-            fontWeight={"bold"}
-            _hover={{ bg: "#008ecc" }}
-          >
-            Verify
-          </Button>
+          <Box h="60px">
+            <Button
+              w="full"
+              onClick={verifyOtp}
+              bg={"#008ecc"}
+              color="white"
+              fontWeight={"bold"}
+              _hover={{ bg: "#008ecc" }}
+            >
+              Verify
+            </Button>
+          </Box>
         </VStack>
       </VStack>
-      <VStack w="360px" display={takeName ? "flex" : "none"}>
+      <VStack w="360px" display={takeName ? "flex" : "none"} gap={3}>
         <Input
           type={"text"}
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter Name"
         />
-        <Button
-          onClick={() => {
-            setUser({ ...user, name: name });
-            navigate("/");
-          }}
-          bg={"#008ecc"}
-          color="white"
-          fontWeight={"bold"}
-          _hover={{ bg: "#008ecc" }}
-        >
-          Confirm
-        </Button>
+        <Box h="60px">
+          <Button
+            onClick={() => {
+              setUser({ ...user, name: name });
+              navigate("/");
+            }}
+            bg={"#008ecc"}
+            color="white"
+            fontWeight={"bold"}
+            _hover={{ bg: "#008ecc" }}
+          >
+            Confirm
+          </Button>
+        </Box>
       </VStack>
     </>
   );
