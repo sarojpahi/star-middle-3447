@@ -12,7 +12,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Loca } from "./NavComps/Loca";
 import { BsPersonFill, BsFillCartFill } from "react-icons/bs";
 import { Sidebar } from "./Sidebar";
@@ -25,10 +25,11 @@ import {
   Jewellery,
   PremiumFruits,
 } from "./NavComps/Menus";
+import { useContext } from "react";
+import { AuthContext } from "../Contexts/UserAuth";
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
-  const { params } = useParams();
-  console.log(params);
+  const { user } = useContext(AuthContext);
   return (
     <>
       <Flex
@@ -51,7 +52,7 @@ export const Navbar = () => {
           />
         </Box>
         <Box w={"110px"}>
-          <Link to="./" cursor={params === "./" ? "auto" : "pointer"}>
+          <Link to="/">
             <Image src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg"></Image>
           </Link>
         </Box>
@@ -70,7 +71,7 @@ export const Navbar = () => {
         <Link to={"/customer/account/login"}>
           <HStack h="100%" color="white" cursor={"pointer"}>
             <Icon as={BsPersonFill} w="28px" h="32px"></Icon>
-            <Text>Sign in / Sign up</Text>
+            <Text>{user.name ? user.name : "Sign in / Sign up"}</Text>
           </HStack>
         </Link>
         <Link path="/checkout/cart" to={"/checkout/cart"}>

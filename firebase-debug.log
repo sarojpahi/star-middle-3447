@@ -1,0 +1,18 @@
+[debug] [2022-09-28T14:20:39.582Z] ----------------------------------------------------------------------
+[debug] [2022-09-28T14:20:39.584Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\saroj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2022-09-28T14:20:39.585Z] CLI Version:   11.11.0
+[debug] [2022-09-28T14:20:39.585Z] Platform:      win32
+[debug] [2022-09-28T14:20:39.585Z] Node Version:  v16.15.1
+[debug] [2022-09-28T14:20:39.587Z] Time:          Wed Sep 28 2022 19:50:39 GMT+0530 (India Standard Time)
+[debug] [2022-09-28T14:20:39.587Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-28T14:20:39.602Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[debug] [2022-09-28T14:20:40.473Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-09-28T14:20:40.474Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=862161387&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
