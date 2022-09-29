@@ -14,9 +14,21 @@ import {
 export const Footer = () => {
   return (
     <Box w={"full"} bg="#ececed">
-      <Flex justify={"space-around"} h="350px">
-        <Flex w={"80%"} p="50px" gap={"40%"}>
-          <VStack align={"flex-start"}>
+      <Flex
+        w={"full"}
+        justify={"space-around"}
+        h={["350px", "300px", "300px", "350px", "350px"]}
+      >
+        <Flex
+          w={["100%", "100%", "100%", "80%", "80%", "80%"]}
+          p={["15px", "15px", "15px", "50px", "50px"]}
+          gap={["10px", "10px", "10px", "30%", "30%", "40%"]}
+        >
+          <VStack
+            w="full"
+            align={"flex-start"}
+            display={["none", "none", "none", "flex", "flex", "flex"]}
+          >
             <Text fontSize={12} color="black" fontWeight={"bold"}>
               MOST POPULAR CATEGORIES
             </Text>
@@ -31,7 +43,7 @@ export const Footer = () => {
               <ListItem>Dairy & Bakery</ListItem>
             </List>
           </VStack>
-          <VStack align={"flex-start"}>
+          <VStack align={"flex-start"} w="full">
             <Text fontSize={12} color="black" fontWeight={"bold"}>
               CUSTOMER SERVICES
             </Text>
@@ -47,12 +59,17 @@ export const Footer = () => {
             </List>
           </VStack>
         </Flex>
-        <Flex p="50px" gap={4} w="40%">
+        <Flex
+          mt={["15px"]}
+          p={["0", "0", "0", "50px", "50px", "50px"]}
+          gap={["10px", "10px", "10px", "30%", "30%", "40%"]}
+          w={["full", "full", "full", "full", "full", "40%"]}
+        >
           <Divider
             w="1px"
             bg={"grey"}
             orientation="vertical"
-            pb="30px"
+            pb={["0", "0", "0", "30px", "30px", "30px"]}
           ></Divider>
           <VStack fontSize={12} align="flex-start">
             <VStack align={"flex-start"}>
@@ -71,7 +88,10 @@ export const Footer = () => {
                 <Text>8:00 AM to 8:00 PM, 365 days</Text>
               </Box>
 
-              <Text fontSize={12} w="70%">
+              <Text
+                fontSize={12}
+                w={["80%", "80%", "80%", "80%", "80%", "70%"]}
+              >
                 Please note that you are accessing the BETA Version of
                 <Link
                   href="www.jiomart.com"
@@ -82,7 +102,10 @@ export const Footer = () => {
                   www.jiomart.com
                 </Link>
               </Text>
-              <Text fontSize={12} w="70%">
+              <Text
+                fontSize={12}
+                w={["80%", "80%", "80%", "80%", "80%", "70%"]}
+              >
                 Should you encounter any bugs, glitches, lack of functionality,
                 delayed deliveries, billing errors or other problems on the beta
                 website, please email us on{" "}
@@ -90,21 +113,38 @@ export const Footer = () => {
                   cs@jiomart.com
                 </Link>
               </Text>
-              <Text fontSize={12} color="black" fontWeight={"bold"}>
-                DOWNLOAD APP
-              </Text>
-              <HStack>
-                <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"></Image>
-                <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"></Image>
-              </HStack>
+              <VStack
+                align={"flex-start"}
+                display={["none", "none", "none", "flex", "flex", "flex"]}
+              >
+                <Text fontSize={12} color="black" fontWeight={"bold"}>
+                  DOWNLOAD APP
+                </Text>
+                <HStack>
+                  <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"></Image>
+                  <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"></Image>
+                </HStack>
+              </VStack>
             </VStack>
           </VStack>
         </Flex>
       </Flex>
-      <VStack>
+      <VStack align={"flex-start"} ml="20px">
+        <VStack
+          align={"flex-start"}
+          display={["flex", "flex", "flex", "none", "none", "none"]}
+        >
+          <Text fontSize={12} color="black" fontWeight={"bold"}>
+            DOWNLOAD APP
+          </Text>
+          <HStack>
+            <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"></Image>
+            <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"></Image>
+          </HStack>
+        </VStack>
         <Divider h="1px" bg={"grey"} orientation="horizontal" w="95%"></Divider>
         <HStack justify={"space-around"} fontSize={12} w="full" pb="20px">
-          <Text>
+          <Text display={["none", "none", "none", "flex", "flex", "flex"]}>
             Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari
             5.1.5+, Google Chrome 80+
           </Text>
