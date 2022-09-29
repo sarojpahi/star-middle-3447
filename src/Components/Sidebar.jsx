@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Flex,
   Heading,
   HStack,
@@ -13,12 +14,15 @@ import {
 } from "@chakra-ui/react";
 import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
 import { IoMdClose } from "@react-icons/all-files/io/IoMdClose";
+import { useContext } from "react";
+import { AuthContext } from "../Contexts/UserAuth";
 export const Sidebar = ({ shadow, onClick }) => {
+  const { user } = useContext(AuthContext);
   return (
     <Box w="full">
       <Flex
         h={"100vh"}
-        w="340px"
+        w={"350px"}
         position={"fixed"}
         top="0"
         left="0"
@@ -28,18 +32,17 @@ export const Sidebar = ({ shadow, onClick }) => {
       >
         <VStack
           bg={"#008ecc"}
-          h="90px"
+          h="92px"
           w="100%"
           color={"white"}
           p={2}
           justify="flex-start"
           align={"flex-start"}
-          gap={1}
         >
           <HStack fontSize={18} w="100%" justifyContent={"space-between"}>
-            <Flex align={"center"} gap={4}>
+            <Flex align={"center"} gap={4} mt={2}>
               <Icon as={FaRegUserCircle}></Icon>
-              <Text>Hello, Sign in</Text>
+              <Text> Hello, {user.name ? user.name : "Sign in"}</Text>
             </Flex>
             <Icon as={IoMdClose} cursor="pointer" onClick={onClick}></Icon>
           </HStack>
@@ -70,8 +73,8 @@ export const Sidebar = ({ shadow, onClick }) => {
             <ListItem>GoGreen with JioMart</ListItem>
             <ListItem>All Offers</ListItem>
           </List>
-          <Box h={1} w="full" bg="grey" color="transparent">
-            .
+          <Box h={2} w="full" bg={"blackAlpha.400"}>
+            <Divider orientation="horizontal"></Divider>
           </Box>
           <List p={3} spacing={3}>
             <ListItem>My Account</ListItem>
@@ -79,8 +82,8 @@ export const Sidebar = ({ shadow, onClick }) => {
             <ListItem>About us</ListItem>
             <ListItem>Guide</ListItem>
           </List>
-          <Box h={1} w="full" bg="grey" color="transparent">
-            .
+          <Box h={1} w="full" bg={"blackAlpha.400"}>
+            <Divider orientation="horizontal"></Divider>
           </Box>
           <VStack align={"flex-start"} p={3}>
             <Heading>Contact Us</Heading>
@@ -124,7 +127,7 @@ export const Sidebar = ({ shadow, onClick }) => {
           <Box></Box>
         </VStack>
       </Flex>
-      <Box w="100%" h={"100vh"} backdropFilter="blur(3px)"></Box>
+      <Box h={"100vh"} backdropFilter="blur(1px)"></Box>
     </Box>
   );
 };

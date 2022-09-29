@@ -41,10 +41,13 @@ export const Loca = () => {
           outline={"none"}
           cursor={"auto"}
           display="flex"
-          flexDirection={"column"}
-          w="50px"
+          alignItems={"center"}
+          justifyContent="center"
+          flexDirection={["row", "row", "row", "column"]}
+          w={["full", "full", "full", "50px"]}
           fontSize={10}
           ml="-9"
+          gap={[2, 2, 2, 0]}
         >
           Deliver to
           <Text

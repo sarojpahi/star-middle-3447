@@ -10,6 +10,7 @@ import {
   Slide,
   Text,
   useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
@@ -33,30 +34,85 @@ export const Navbar = () => {
   return (
     <>
       <Flex
+        direction={"column"}
         background={`#008ecc`}
-        h="72px"
-        maxW={"100%"}
-        minw={["1030px"]}
+        w="full"
         m="0px auto"
-        boxSizing="boxderBox"
-        align={"center"}
-        justify={"center"}
-        gap={"32px"}
+        py={2}
       >
-        <Box onClick={onToggle}>
-          <HamburgerIcon
-            color={"white"}
-            w={"32px"}
-            h="32px"
-            cursor={"pointer"}
-          />
-        </Box>
-        <Box w={"110px"}>
-          <Link to="/">
-            <Image src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg"></Image>
-          </Link>
-        </Box>
-        <InputGroup background={"white"} borderRadius={"10px"} maxW="72ch">
+        <Flex
+          h="72px"
+          w="full"
+          boxSizing="boxderBox"
+          align={"center"}
+          justify={[
+            "space-between",
+            "space-between",
+            "space-between",
+            "space-between",
+            "center",
+          ]}
+          gap={"32px"}
+        >
+          <Box onClick={onToggle}>
+            <HamburgerIcon
+              color={"white"}
+              w={"32px"}
+              h="32px"
+              cursor={"pointer"}
+              ml="20px"
+            />
+          </Box>
+          <Box w={"110px"}>
+            <Link to="/">
+              <Image src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg"></Image>
+            </Link>
+          </Box>
+          <InputGroup
+            background={"white"}
+            borderRadius={"10px"}
+            maxW="72ch"
+            display={["none", "none", "none", "flex"]}
+          >
+            <Input
+              placeholder="Search essentials, groceries, and more …"
+              type="search"
+            ></Input>
+            <InputRightElement>
+              <Image
+                src="https://www.jiomart.com/assets/version1662994539/smartweb/images/icons/list-view.svg"
+                cursor={"pointer"}
+              ></Image>
+            </InputRightElement>
+          </InputGroup>
+          <HStack
+            gap={2}
+            mr="20px"
+            w={["auto", "auto", "auto", "45%", "auto", "15%"]}
+          >
+            <Link to={"/customer/account/login"}>
+              <HStack h="100%" color="white" cursor={"pointer"}>
+                <Icon as={BsPersonFill} w="28px" h="32px"></Icon>
+                <Text display={["none", "none", "none", "flex"]}>
+                  {user.name ? user.name : "Sign in / Sign up"}
+                </Text>
+              </HStack>
+            </Link>
+            <Link path="/checkout/cart" to={"/checkout/cart"}>
+              <HStack h="100%" color="white" cursor={"pointer"}>
+                <Icon as={BsFillCartFill} w="20px" h="20px"></Icon>
+                <Text display={["none", "none", "none", "flex"]}>Cart</Text>
+              </HStack>
+            </Link>
+          </HStack>
+        </Flex>
+        <InputGroup
+          w={"95%"}
+          m="auto"
+          background={"white"}
+          borderRadius={"10px"}
+          display={["flex", "flex", "flex", "none"]}
+        >
           <Input
             placeholder="Search essentials, groceries, and more …"
             type="search"
@@ -68,38 +124,36 @@ export const Navbar = () => {
             ></Image>
           </InputRightElement>
         </InputGroup>
-        <Link to={"/customer/account/login"}>
-          <HStack h="100%" color="white" cursor={"pointer"}>
-            <Icon as={BsPersonFill} w="28px" h="32px"></Icon>
-            <Text>{user.name ? user.name : "Sign in / Sign up"}</Text>
-          </HStack>
-        </Link>
-        <Link path="/checkout/cart" to={"/checkout/cart"}>
-          <HStack h="100%" color="white" cursor={"pointer"}>
-            <Icon as={BsFillCartFill} w="20px" h="20px"></Icon>
-            <Text>Cart</Text>
-          </HStack>
-        </Link>
       </Flex>
+
       <Flex
         background={`#ececed`}
         h="40px"
         maxW={"100%"}
-        minw={["1030px"]}
-        m="0px auto"
-        boxSizing="boxderBox"
         align={"center"}
-        justify={"center"}
-        gap={"32px"}
+        justify={["flex-start", "flex-start", "flex-start", "center"]}
+        gap="32px"
       >
-        <Loca />
-        <Groceries />
-        <PremiumFruits />
-        <HomeKitchen />
-        <Fashion />
-        <Electronics />
-        <Beauty />
-        <Jewellery />
+        <Flex h="40px" boxSizing="boxderBox" align={"center"} gap={"32px"}>
+          <Loca />
+          <Flex
+            display={["none", "none", "none", "flex"]}
+            h="40px"
+            m="0px auto"
+            boxSizing="boxderBox"
+            align={"center"}
+            justify={"center"}
+            gap={"32px"}
+          >
+            <Groceries />
+            <PremiumFruits />
+            <HomeKitchen />
+            <Fashion />
+            <Electronics />
+            <Beauty />
+            <Jewellery />
+          </Flex>
+        </Flex>
       </Flex>
       <Slide direction="left" in={isOpen} style={{ zIndex: 10 }}>
         <Sidebar shadow="md" onClick={onToggle} />
