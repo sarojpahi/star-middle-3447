@@ -1,26 +1,22 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import Slider from "react-slick";
-import data from "../Components/Data/topc.json";
-import greatdeals from "../Components/Data/greatdeal.json";
-import { settings1, settings2 } from "../Components/Data/setting";
+import { Box, Heading } from "@chakra-ui/react";
+import greatdeals from "../Components/HomeComponents/Data/greatdeal.json";
+import spaData from "../Components/HomeComponents/Data/SmartPhoneAcc.json";
+import teData from "../Components/HomeComponents/Data/TrendingElec.json";
+import tyData from "../Components/HomeComponents/Data/TyoharData.json";
+import ffData from "../Components/HomeComponents/Data/FastandFeast.json";
+import dmData from "../Components/HomeComponents/Data/Dhamaka.json";
+import { MultiItemSlideCarousel } from "../Components/HomeComponents/MultiItemSlideCarousel";
+import smartphonebyprice from "../Components/HomeComponents/Data/smartphonebyprice.json";
+import { SingleSlideCarousel } from "../Components/HomeComponents/SingleSlideCarousel";
+import { SimpleCarusel } from "../Components/HomeComponents/SimpleCarusel";
+import { BestOfElectronics } from "../Components/HomeComponents/BestOfElectronics";
+import { Tyhor } from "../Components/HomeComponents/Tyhor";
+import { Dhamaka } from "../Components/HomeComponents/Dhamaka";
+import { Navratri } from "../Components/HomeComponents/Navratri";
 export const Home = () => {
   return (
     <>
-      <Box margin="20px auto" w="95%">
-        <Slider {...settings1}>
-          {data.map((el) => (
-            <img src={el.image} key={el.id} alt="" />
-          ))}
-        </Slider>
-      </Box>
+      <SingleSlideCarousel />
       <Box w="95%" m="auto">
         <img
           style={{ width: "100%" }}
@@ -42,52 +38,133 @@ export const Home = () => {
           alt=""
         />
       </Box>
-      <Box>
-        <Heading>Great Deals on Great Brands</Heading>
-        <Flex my={"20px"}>
-          <Box w="95%" mx={"auto"}>
-            <Slider {...settings2}>
-              {greatdeals.map((el) => (
-                <Box key={el.id} border="1px solid red" bg={"white"} p="2">
-                  <Box
-                    position={"absolute"}
-                    w="50px"
-                    h="50px"
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                    bgImage={
-                      "https://www.jiomart.com/assets/version1664452279/jiomsite/images/icons/offer_bg.svg"
-                    }
-                    bgRepeat="no-repeat"
-                    bgPosition="center"
-                    bgSize={"cover"}
-                  >
-                    <Text
-                      color={"white"}
-                      fontSize="12px"
-                      textAlign={"center"}
-                      w="40px"
-                    >
-                      {el.off}
-                      <span style={{ fontSize: "10px" }}>%</span> OFF
-                    </Text>
-                  </Box>
-                  <Box p={2}>
-                    <Image w="full" src={el.img2}></Image>
-                  </Box>
-                  <Box>
-                    <Text>{el.title}</Text>
-                    <Text>{el.price}</Text>
-                    <Text>{el["M.R.P"]}</Text>
-                    <Text>{el.Save}</Text>
-                  </Box>
-                </Box>
-              ))}
-            </Slider>
+      <Box my={2} p="4">
+        <Box my={"20px"} ml="8px">
+          <Box
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Great Deals on Great Brands
+            </Heading>
+            <MultiItemSlideCarousel data={greatdeals} />
           </Box>
-        </Flex>
+        </Box>
+        <Box ml="8px">
+          <Box
+            my={"20px"}
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Never Before Seen Prices
+            </Heading>
+            <MultiItemSlideCarousel data={greatdeals} />
+          </Box>
+        </Box>
+        <Box ml="8px">
+          <Box
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Smartphones For Every Budget
+            </Heading>
+            <SimpleCarusel data={smartphonebyprice} />
+          </Box>
+        </Box>
+        <Box ml="8px">
+          <Box
+            my={"20px"}
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Bestselling Smartphones
+            </Heading>
+            <MultiItemSlideCarousel data={greatdeals} />
+          </Box>
+        </Box>
+        <Box ml="8px">
+          <Box
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Smartphone Accessories
+            </Heading>
+            <SimpleCarusel data={spaData} />
+          </Box>
+        </Box>
+        <Box ml="8px">
+          <Box
+            display={["none", "none", "none", "block", "block", "block"]}
+            my={"20px"}
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Trending Electronics
+            </Heading>
+            <SimpleCarusel data={teData} />
+          </Box>
+        </Box>
       </Box>
+      <BestOfElectronics />
+      <Box my={2} p="4">
+        <Box ml="8px">
+          <Box
+            my={"20px"}
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Electronics Bestsellers
+            </Heading>
+            <MultiItemSlideCarousel data={greatdeals} />
+          </Box>
+        </Box>
+        <Box ml="8px">
+          <Box
+            display={["none", "none", "none", "block", "block", "block"]}
+            my={"20px"}
+            w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+            ml={[0, 0, 0, 5, 5, 6]}
+          >
+            <Heading fontSize={20} mb="3">
+              Tyohar Ready Deals
+            </Heading>
+            <SimpleCarusel data={tyData} />
+          </Box>
+        </Box>
+      </Box>
+      <Tyhor />
+      <Box ml={6}>
+        <Box
+          display={["none", "none", "none", "block", "block", "block"]}
+          my={"20px"}
+          w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+          ml={[0, 0, 0, 5, 5, 6]}
+        >
+          <Heading fontSize={20} mb="3">
+            Dhamaka Deals
+          </Heading>
+          <SimpleCarusel data={dmData} />
+        </Box>
+        <Box
+          display={["none", "none", "none", "block", "block", "block"]}
+          my={"20px"}
+          w={["100%", "100%", "100%", "95%", "95%", "95%"]}
+          ml={[0, 0, 0, 5, 5, 6]}
+        >
+          <Heading fontSize={20} mb="3">
+            Fast & Feast
+          </Heading>
+          <SimpleCarusel data={ffData} />
+        </Box>
+      </Box>
+      <Dhamaka />
+      <Navratri />
     </>
   );
 };
