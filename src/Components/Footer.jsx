@@ -14,15 +14,12 @@ import {
 export const Footer = () => {
   return (
     <Box w={"full"} bg="#ececed">
-      <Flex
-        w={"full"}
-        justify={"space-around"}
-        h={["350px", "300px", "300px", "350px", "350px"]}
-      >
+      <Flex w={"full"} justify={"space-around"} mb="10px">
         <Flex
-          w={["100%", "100%", "100%", "80%", "80%", "80%"]}
+          ml={[0, 0, 0, "50px", "50px", "50px"]}
+          w={["100%", "100%", "100%", "70%", "70%", "80%"]}
           p={["15px", "15px", "15px", "50px", "50px"]}
-          gap={["10px", "10px", "10px", "30%", "30%", "40%"]}
+          gap={["10px", "10px", "10px", "20%", "20%", "30%"]}
         >
           <VStack
             w="full"
@@ -60,19 +57,21 @@ export const Footer = () => {
           </VStack>
         </Flex>
         <Flex
-          mt={["15px"]}
-          p={["0", "0", "0", "50px", "50px", "50px"]}
-          gap={["10px", "10px", "10px", "30%", "30%", "40%"]}
-          w={["full", "full", "full", "full", "full", "40%"]}
+          mt={["0px"]}
+          pt={["0", "0", "0", "50px", "50px", "50px"]}
+          w={["full", "full", "full", "40%", "40%", "40%"]}
         >
-          <Divider
-            w="1px"
-            bg={"grey"}
-            orientation="vertical"
-            pb={["0", "0", "0", "30px", "30px", "30px"]}
-          ></Divider>
-          <VStack fontSize={12} align="flex-start">
-            <VStack align={"flex-start"}>
+          <HStack fontSize={12} align="flex-start">
+            <Divider
+              w="1px"
+              bg={"grey"}
+              orientation="vertical"
+              mr="5px"
+            ></Divider>
+            <VStack
+              align={"flex-start"}
+              w={["full", "full", "full", "80%", "80%", "70%"]}
+            >
               <Text fontSize={12} color="black" fontWeight={"bold"}>
                 CONTACT US
               </Text>
@@ -116,17 +115,18 @@ export const Footer = () => {
               <VStack
                 align={"flex-start"}
                 display={["none", "none", "none", "flex", "flex", "flex"]}
+                gap={1}
               >
                 <Text fontSize={12} color="black" fontWeight={"bold"}>
                   DOWNLOAD APP
                 </Text>
-                <HStack>
+                <HStack gap={2}>
                   <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"></Image>
                   <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"></Image>
                 </HStack>
               </VStack>
             </VStack>
-          </VStack>
+          </HStack>
         </Flex>
       </Flex>
       <VStack align={"flex-start"} ml="20px">
@@ -137,7 +137,7 @@ export const Footer = () => {
           <Text fontSize={12} color="black" fontWeight={"bold"}>
             DOWNLOAD APP
           </Text>
-          <HStack>
+          <HStack gap={2}>
             <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/play_store.png"></Image>
             <Image src="https://www.jiomart.com/images/cms/wysiwyg/app-icons/ios_store.png"></Image>
           </HStack>
