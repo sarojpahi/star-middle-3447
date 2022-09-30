@@ -58,7 +58,7 @@ export const Footer = () => {
         </Flex>
         <Flex
           mt={["0px"]}
-          pt={["0", "0", "0", "50px", "50px", "50px"]}
+          pt={["15px", "15px", "15px", "50px", "50px"]}
           w={["full", "full", "full", "40%", "40%", "40%"]}
         >
           <HStack fontSize={12} align="flex-start">

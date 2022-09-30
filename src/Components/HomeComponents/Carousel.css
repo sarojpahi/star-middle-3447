@@ -1,0 +1,109 @@
+.single .customIndicator {
+  bottom: 7px;
+}
+.single .slick-dots li button::before {
+  font-size: 10px;
+}
+.single .slick-arrow.slick-prev,
+.single .slick-arrow.slick-next {
+  width: 50px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.single .slick-prev,
+.single .slick-prev:hover {
+  left: 0;
+  outline: 0;
+  top: 30%;
+  transform: rotate(180deg);
+  background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/banner_arrow_right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.single .slick-next,
+.single .slick-next:hover {
+  right: 0;
+  outline: 0;
+  background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/banner_arrow_right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.single .slick-prev::before,
+.single .slick-next::before {
+  display: none;
+}
+.multi .slick-arrow.slick-prev,
+.multi .slick-arrow.slick-next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.multi .slick-prev,
+.multi .slick-prev:hover {
+  left: -50px;
+  background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/left_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.multi .slick-next,
+.multi .slick-next:hover {
+  right: -45px;
+  background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/right_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.multi .slick-prev::before,
+.multi .slick-next::before {
+  display: none;
+}
+.ImageItem {
+  max-width: 200px;
+  width: 100%;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.ImageItem:hover {
+  transform: scale(1.05);
+}
+.multi1 .slick-arrow.slick-prev,
+.multi1 .slick-arrow.slick-next {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.multi1 .slick-prev,
+.multi1 .slick-prev:hover {
+  background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/white_prev.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.multi1 .slick-next,
+.multi1 .slick-next:hover {
+  background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/white_next.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.multi1 .slick-prev::before,
+.multi1 .slick-next::before {
+  display: none;
+}
+.multi1Image {
+  width: 98%;
+  height: 98%;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.multi1Image:hover {
+  transform: scale(1.02);
+}

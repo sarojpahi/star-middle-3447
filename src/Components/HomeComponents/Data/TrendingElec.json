@@ -1,0 +1,50 @@
+[
+  {
+    "id": "te1",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453089_Home_care_appliances.jpg"
+  },
+  {
+    "id": "te2",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453124_Television.jpg"
+  },
+  {
+    "id": "te3",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453227_Smartwatches.jpg"
+  },
+  {
+    "id": "te4",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453360_Audio_Devices.jpg"
+  },
+  {
+    "id": "te5",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453406_Grooming_Personal_Care.jpg"
+  },
+  {
+    "id": "te6",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453315_Laptops_Accessories.jpg"
+  },
+  {
+    "id": "te7",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453434_Washing_Machine.jpg"
+  },
+  {
+    "id": "te8",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453460_Mixer_Grinder.jpg"
+  },
+  {
+    "id": "te9",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453489_Refrigerators.jpg"
+  },
+  {
+    "id": "te10",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453596_Monitors_Desktops.jpg"
+  },
+  {
+    "id": "te11",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453643_Air_Conditioners.jpg"
+  },
+  {
+    "id": "te12",
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664453684_Camera_Accessories.jpg"
+  }
+]
