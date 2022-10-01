@@ -88,6 +88,7 @@
 }
 .multi1 .slick-next,
 .multi1 .slick-next:hover {
+  right: -15px;
   background: url(https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/white_next.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -96,14 +97,16 @@
 .multi1 .slick-next::before {
   display: none;
 }
-.multi1Image {
+.multi1ImageBox {
   width: 98%;
-  height: 98%;
   transition: all ease 0.2s;
+}
+.multi1ImageBox:hover {
+  transform: scale(1.02);
+}
+.multi1Image {
+  width: 100%;
+  border-radius: 15px;
   cursor: pointer;
   object-fit: cover;
-  border-radius: 12px;
-}
-.multi1Image:hover {
-  transform: scale(1.02);
 }
