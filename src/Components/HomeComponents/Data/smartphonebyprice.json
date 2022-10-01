@@ -1,34 +1,34 @@
 [
   {
-    "id": "filterimage1",
+    "id": 11201,
     "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448464_Flagship_Smartphones.jpg"
   },
   {
-    "id": "filterimage2",
+    "id": 11202,
     "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448532_Below_9999.jpg"
   },
   {
-    "id": "filterimage3",
+    "id": 11203,
     "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448562_10000_to_29999.jpg"
   },
   {
-    "id": "filterimage4",
+    "id": 11204,
     "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448587_Above_30000.jpg"
   },
   {
-    "id": "",
+    "id": 11205,
     "filterimage": ""
   },
   {
-    "id": "",
+    "id": 11206,
     "filterimage": ""
   },
   {
-    "id": "",
+    "id": 11207,
     "filterimage": ""
   },
   {
-    "id": "",
+    "id": 11208,
     "filterimage": ""
   }
 ]

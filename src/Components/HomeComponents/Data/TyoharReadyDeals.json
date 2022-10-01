@@ -1,26 +1,32 @@
 [
   {
-    "id": "trd1",
-    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664462136_Brand-Banners-_1680x320_2.jpg"
+    "id": 11241,
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664462136_Brand-Banners-_1680x320_2.jpg",
+    "filterimage2": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664461966_Brand-Banners_756x325_2.jpg"
   },
   {
-    "id": "trd2",
-    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664462145_Brand-Banners-_1680x320_5.jpg"
+    "id": 11242,
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664462145_Brand-Banners-_1680x320_5.jpg",
+    "filterimage2": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664461983_Brand-Banners_756x325_6.jpg"
   },
   {
-    "id": "trd3",
-    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460211_Naturoz.jpg"
+    "id": 11243,
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460211_Naturoz.jpg",
+    "filterimage2": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664458851_Naturoz.jpg"
   },
   {
-    "id": "trd4",
-    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460219_LuvIt.jpg"
+    "id": 11244,
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460219_LuvIt.jpg",
+    "filterimage2": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664458859_Luvit.jpg"
   },
   {
-    "id": "trd5",
-    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460229_Jiva.jpg"
+    "id": 11245,
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460229_Jiva.jpg",
+    "filterimage2": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664458869_Jivo.jpg"
   },
   {
-    "id": "trd6",
-    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460240_Lal.jpg"
+    "id": 11246,
+    "filterimage": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664460240_Lal.jpg",
+    "filterimage2": "https://www.jiomart.com/images/cms/aw_rbslider/slides/1664458881_Lal_Sweets.jpg"
   }
 ]

@@ -5,20 +5,23 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 import { settings2 } from "./Data/setting";
 import { NumberConvert } from "./Data/NumberConvert";
+import { v4 as uuidv4 } from "uuid";
 
 export const MultiItemSlideCarousel = ({ data }) => {
   return (
-    <Box className="multi">
+    <Box className="multi" key={uuidv4()}>
       <Slider {...settings2}>
         {data.map((el) => (
-          <Box key={el.id} bg={"white"}>
+          <Box key={uuidv4()} bg={"white"}>
             <Box
-              border={"1px solid rgba(111,114,132,.25)"}
+              key={uuidv4()}
+              border={["none", "1px solid rgba(111,114,132,.25)"]}
               borderRadius="5px"
               p="2"
               mr="10px"
             >
               <Box
+                key={uuidv4()}
                 position={"absolute"}
                 w="50px"
                 h="50px"

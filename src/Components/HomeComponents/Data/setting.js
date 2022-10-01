@@ -84,9 +84,8 @@ export const settings2 = {
 };
 export const settings3 = {
   dots: false,
-  infinite: false,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 3000,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -96,7 +95,7 @@ export const settings3 = {
     {
       breakpoint: 821,
       settings: {
-        slidesToShow: 1.2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
       },
