@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react";
-export const AddButton = () => {
+export const AddButton = ({ onAdd }) => {
   return (
     <Button
       w="full"
@@ -12,6 +12,7 @@ export const AddButton = () => {
       fontSize={"14px"}
       mt="5px"
       _hover={{ background: "#008ecc" }}
+      onClick={onAdd}
     >
       Add to Cart
     </Button>

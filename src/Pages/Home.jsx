@@ -29,7 +29,7 @@ import { LastMinBuy } from "../Components/HomeComponents/LastMinBuy";
 import { v4 as uuidv4 } from "uuid";
 export const Home = () => {
   return (
-    <>
+    <Box w="full" mt="130px">
       <SingleSlideCarousel />
       <Box w="95%" m="auto">
         <img
@@ -281,6 +281,6 @@ export const Home = () => {
           alt=""
         />
       </Box>
-    </>
+    </Box>
   );
 };

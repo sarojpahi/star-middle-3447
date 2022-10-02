@@ -27,11 +27,13 @@ import {
 } from "./NavComps/Menus";
 import { useContext } from "react";
 import { AuthContext } from "../Contexts/UserAuth";
+import { useCartContext } from "../Contexts/CartContext";
 export const Navbar = () => {
+  const { cartItems } = useCartContext();
   const { isOpen, onToggle } = useDisclosure();
   const { user } = useContext(AuthContext);
   return (
-    <>
+    <Box w="full" position={"fixed"} top="0" left={0} zIndex="9999">
       <Flex
         direction={"column"}
         background={`#008ecc`}
@@ -98,10 +100,31 @@ export const Navbar = () => {
               </HStack>
             </Link>
             <Link path="/checkout/cart" to={"/checkout/cart"}>
-              <HStack h="100%" color="white" cursor={"pointer"}>
-                <Icon as={BsFillCartFill} w="20px" h="20px"></Icon>
-                <Text display={["none", "none", "none", "flex"]}>Cart</Text>
-              </HStack>
+              <Flex h="100%" color="white" cursor={"pointer"}>
+                <Icon as={BsFillCartFill} w="22px" h="24px"></Icon>
+                <Box
+                  borderRadius={"50%"}
+                  w="18px"
+                  h="18px"
+                  bg="red"
+                  justify={"center"}
+                  align="center"
+                  color={"white"}
+                  position="relative"
+                  top={"-8px"}
+                  right="15px"
+                  fontSize="12px"
+                  display={cartItems.length !== 0 ? "block" : "none"}
+                >
+                  {cartItems.length}
+                </Box>
+                <Text
+                  ml={cartItems.length === 0 ? "10px" : "none"}
+                  display={["none", "none", "none", "flex"]}
+                >
+                  Cart
+                </Text>
+              </Flex>
             </Link>
           </HStack>
         </Flex>
@@ -150,7 +173,7 @@ export const Navbar = () => {
             <Link>
               <PremiumFruits />
             </Link>
-            <Link>
+            <Link to={"/c/homekitchen"}>
               <HomeKitchen />
             </Link>
             <Link>
@@ -171,6 +194,6 @@ export const Navbar = () => {
       <Slide direction="left" in={isOpen} style={{ zIndex: 10 }}>
         <Sidebar shadow="md" onClick={onToggle} />
       </Slide>
-    </>
+    </Box>
   );
 };

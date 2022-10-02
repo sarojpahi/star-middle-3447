@@ -13,13 +13,14 @@ import { SortButton } from "./SortButton";
 import { v4 as uuidv4 } from "uuid";
 import { ProductCard2 } from "./ProductCard2";
 import { useState } from "react";
+export const changeNumber = (val) => {
+  let number = val.trim().split(" ");
+  number = number[number.length - 1];
+  return Number(number);
+};
 export const DataSection = ({ headerImage, cartdata }) => {
   const [data, setData] = useState(cartdata);
-  const changeNumber = (val) => {
-    let number = val.trim().split(" ")[1];
-    return Number(number);
-  };
-  changeNumber(cartdata[1]["final-price"]);
+
   let sortdata = [...cartdata];
   const handleSort = (text) => {
     if (text === "High to Low")

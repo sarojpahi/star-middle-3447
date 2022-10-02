@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import { settings1 } from "./Data/setting";
 export const SingleSlideCarousel = () => {
   return (
-    <Box margin="20px auto" w="full" className="single" key={uuidv4()}>
+    <Box mx="auto" pt="20px" w="full" className="single" key={uuidv4()}>
       <Slider {...settings1}>
         {data.map((el) => (
           <img
