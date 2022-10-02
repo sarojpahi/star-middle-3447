@@ -63,8 +63,10 @@
   display: none;
 }
 .ImageItem {
-  max-width: 200px;
+  margin: auto;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: all 0.2s;
   cursor: pointer;
 }
@@ -109,4 +111,14 @@
   border-radius: 15px;
   cursor: pointer;
   object-fit: cover;
+}
+.text2line {
+  display: block;
+  display: -webkit-box;
+  max-width: 400px;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -144,13 +144,27 @@ export const Navbar = () => {
             justify={"center"}
             gap={"32px"}
           >
-            <Groceries />
-            <PremiumFruits />
-            <HomeKitchen />
-            <Fashion />
-            <Electronics />
-            <Beauty />
-            <Jewellery />
+            <Link to="/c/groceries">
+              <Groceries />
+            </Link>
+            <Link>
+              <PremiumFruits />
+            </Link>
+            <Link>
+              <HomeKitchen />
+            </Link>
+            <Link>
+              <Fashion />
+            </Link>
+            <Link>
+              <Electronics />
+            </Link>
+            <Link>
+              <Beauty />
+            </Link>
+            <Link>
+              <Jewellery />
+            </Link>
           </Flex>
         </Flex>
       </Flex>
