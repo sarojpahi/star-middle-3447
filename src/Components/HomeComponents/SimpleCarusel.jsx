@@ -9,7 +9,11 @@ export const SimpleCarusel = ({ data }) => {
         {data.map((el) => (
           <Box key={uuidv4()} bg={"white"}>
             <Box p={2} key={uuidv4()}>
-              <img src={el.filterimage} className="ImageItem" alt=""></img>
+              {el.filterimage ? (
+                <img src={el.filterimage} className="ImageItem" alt=""></img>
+              ) : (
+                ""
+              )}
             </Box>
           </Box>
         ))}
