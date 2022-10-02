@@ -89,11 +89,11 @@ export const Navbar = () => {
             mr="20px"
             w={["auto", "auto", "auto", "45%", "auto", "15%"]}
           >
-            <Link to={"/customer/account/login"}>
+            <Link to={"customer/account"}>
               <HStack h="100%" color="white" cursor={"pointer"}>
                 <Icon as={BsPersonFill} w="28px" h="32px"></Icon>
                 <Text display={["none", "none", "none", "flex"]}>
-                  {user.name ? user.name : "Sign in / Sign up"}
+                  {user && user.name ? user.name : "Sign in / Sign up"}
                 </Text>
               </HStack>
             </Link>
@@ -144,13 +144,27 @@ export const Navbar = () => {
             justify={"center"}
             gap={"32px"}
           >
-            <Groceries />
-            <PremiumFruits />
-            <HomeKitchen />
-            <Fashion />
-            <Electronics />
-            <Beauty />
-            <Jewellery />
+            <Link to="/c/groceries">
+              <Groceries />
+            </Link>
+            <Link>
+              <PremiumFruits />
+            </Link>
+            <Link>
+              <HomeKitchen />
+            </Link>
+            <Link>
+              <Fashion />
+            </Link>
+            <Link>
+              <Electronics />
+            </Link>
+            <Link>
+              <Beauty />
+            </Link>
+            <Link>
+              <Jewellery />
+            </Link>
           </Flex>
         </Flex>
       </Flex>
