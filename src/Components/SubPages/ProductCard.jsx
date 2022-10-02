@@ -1,8 +1,10 @@
 import { Box, Text } from "@chakra-ui/react";
 import { v4 as uuidv4 } from "uuid";
+import { useCartContext } from "../../Contexts/CartContext";
 import { AddButton } from "./AddButton";
 
 export const ProductCard = ({ data }) => {
+  const { onAdd } = useCartContext();
   return (
     <Box
       key={uuidv4()}
@@ -66,7 +68,7 @@ export const ProductCard = ({ data }) => {
           </Text>
         </Box>
         <Box key={uuidv4()}>
-          <AddButton />
+          <AddButton onAdd={() => onAdd(data)} />
         </Box>
       </Box>
     </Box>

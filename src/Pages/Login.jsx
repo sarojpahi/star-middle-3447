@@ -10,13 +10,10 @@ import {
 import { PhoneAuth } from "../Contexts/PhoneAuth";
 export const Login = () => {
   return (
-    <Box
-      w="full"
-      bg={"blackAlpha.50"}
-      p={[0, 0, 0, 0, 0, "50px"]}
-      maxH={"90vh"}
-    >
+    <Box w="full" bg={"blackAlpha.50"} maxH={"90vh"} mt="125px">
       <Flex
+        pt={[0, 0, 0, 0, "50px", "50px"]}
+        px={[0, 0, 0, 0, "50px", "50px"]}
         m={"auto"}
         mt={[0, 0, 0, "40px", "40px", "40px"]}
         w={["100%", "100%", "100%", "80%", "80%", "80%"]}

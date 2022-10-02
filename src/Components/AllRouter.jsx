@@ -20,7 +20,9 @@ export const AllRouter = () => {
           </PrivateRoute>
         }
       ></Route>
-      <Route path="/c/groceries" element={<HomeKitchen />}></Route>
+      <Route path="/c/groceries" element={<Home />}></Route>
+      <Route path="/c/homekitchen" element={<HomeKitchen />}></Route>
+      <Route path="/checkout/cart" element={<Cart />}></Route>
     </Routes>
   );
 };

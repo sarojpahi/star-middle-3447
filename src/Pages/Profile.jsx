@@ -17,7 +17,7 @@ export const Profile = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const { logout } = useContext(AuthContext);
   return (
-    <Box bg={"blackAlpha.50"} w="100%">
+    <Box bg={"blackAlpha.50"} w="100%" mt="125px">
       <Box w={["full", "full", "95%", "90%", "80%", "80%"]} mx="auto" py="10px">
         <Box display={["none", "none", "none", "block", "block", "block"]}>
           <Heading fontSize={30} pl="5">
