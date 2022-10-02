@@ -15,7 +15,7 @@ import {
 export const ProfileEdit = ({ isOpen, onClose }) => {
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} position>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
