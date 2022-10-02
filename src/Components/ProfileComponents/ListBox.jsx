@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-export const ListBox = ({ text }) => {
+export const ListBox = ({ text, onClick }) => {
   return (
     <Box
       w="full"
@@ -12,6 +12,8 @@ export const ListBox = ({ text }) => {
       bgPos={"95%"}
       bgImage={`url(https://www.jiomart.com/msassets/images/icons/keyboard_arrow_big_right.svg)`}
       bgRepeat="no-repeat"
+      onClick={onClick}
+      cursor="pointer"
     >
       {text}
     </Box>

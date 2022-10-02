@@ -6,12 +6,12 @@ import {
   HStack,
   Icon,
   Image,
-  Link,
   List,
   ListItem,
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "@react-icons/all-files/fa/FaRegUserCircle";
 import { IoMdClose } from "@react-icons/all-files/io/IoMdClose";
 import { useContext } from "react";
@@ -42,13 +42,15 @@ export const Sidebar = ({ shadow, onClick }) => {
           <HStack fontSize={18} w="100%" justifyContent={"space-between"}>
             <Flex align={"center"} gap={4} mt={2}>
               <Icon as={FaRegUserCircle}></Icon>
-              <Text> Hello, {user.name ? user.name : "Sign in"}</Text>
+              <Text> Hello, {user && user.name ? user.name : "Sign in"}</Text>
             </Flex>
             <Icon as={IoMdClose} cursor="pointer" onClick={onClick}></Icon>
           </HStack>
           <HStack>
             <Box border={"1px solid white"} p={1}>
-              <Text px={12}>Account</Text>
+              <Link to="customer/account" onClick={onClick}>
+                <Text px={12}>Account</Text>
+              </Link>
             </Box>
             <Box border={"1px solid white"} p={1}>
               <Text px={12}>Orders</Text>

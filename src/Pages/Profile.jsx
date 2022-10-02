@@ -8,11 +8,14 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import { DetailBox } from "../Components/ProfileComponents/DetailBox";
 import { ListBox } from "../Components/ProfileComponents/ListBox";
 import { ProfileEdit } from "../Components/ProfileComponents/ProfileEdit";
+import { AuthContext } from "../Contexts/UserAuth";
 export const Profile = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
+  const { logout } = useContext(AuthContext);
   return (
     <Box bg={"blackAlpha.50"} w="100%">
       <Box w={["full", "full", "95%", "90%", "80%", "80%"]} mx="auto" py="10px">
@@ -147,7 +150,7 @@ export const Profile = () => {
                 <Divider w="95%" mx="auto"></Divider>
                 <ListBox text="Contact us" />
                 <Divider w="95%" mx="auto"></Divider>
-                <ListBox text="Logout" />
+                <ListBox text="Logout" onClick={logout} />
                 <Divider w="95%" mx="auto"></Divider>
               </VStack>
               <Flex

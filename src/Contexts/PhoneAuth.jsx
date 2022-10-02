@@ -16,7 +16,6 @@ import { useNavigate } from "react-router-dom";
 function validateNumber(value) {
   if (value === "") return false;
   if (value.length !== 10) {
-    console.log(value);
     return true;
   }
   if (value === 0) return true;
@@ -39,16 +38,12 @@ export const PhoneAuth = () => {
     } catch (error) {
       console.log(error);
     }
-    console.log("Number :", phone);
   };
   const isError = validateNumber(number);
   const verifyOtp = async () => {
-    console.log(confirmObj);
-    console.log(otp);
     try {
       await confirmObj.confirm(otp);
       confirmObj.name ? navigate("/") : setTakeName(true);
-      console.log(confirmObj);
     } catch (error) {
       console.log(error);
     }
