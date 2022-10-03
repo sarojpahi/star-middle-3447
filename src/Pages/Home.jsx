@@ -48,6 +48,11 @@ export const Home = () => {
       <Box w="99%" m="auto">
         <img
           style={{ width: "100%" }}
+          src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664550457_PC_Thematic-Banner_1680x320_30-09-22.jpg"
+          alt=""
+        />
+        <img
+          style={{ width: "100%" }}
           src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448687_Image_3.jpg"
           alt=""
         />

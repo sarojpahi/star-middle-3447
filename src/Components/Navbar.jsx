@@ -31,9 +31,17 @@ import { useCartContext } from "../Contexts/CartContext";
 export const Navbar = () => {
   const { cartItems } = useCartContext();
   const { isOpen, onToggle } = useDisclosure();
-  const { user } = useContext(AuthContext);
+  const { userDetails } = useContext(AuthContext);
+
   return (
-    <Box w="full" position={"fixed"} top="0" left={0} zIndex="9999">
+    <Box
+      w="full"
+      className="fixed"
+      position={"fixed"}
+      top="0"
+      left={0}
+      zIndex="9999"
+    >
       <Flex
         direction={"column"}
         background={`#008ecc`}
@@ -95,7 +103,9 @@ export const Navbar = () => {
               <HStack h="100%" color="white" cursor={"pointer"}>
                 <Icon as={BsPersonFill} w="28px" h="32px"></Icon>
                 <Text display={["none", "none", "none", "flex"]}>
-                  {user && user.name ? user.name : "Sign in / Sign up"}
+                  {userDetails && userDetails.name
+                    ? userDetails.name
+                    : "Sign in / Sign up"}
                 </Text>
               </HStack>
             </Link>

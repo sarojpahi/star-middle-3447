@@ -1,6 +1,4 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-import React from "react";
-
 export const DetailBox = ({ text1, text2 }) => {
   return (
     <Box>

@@ -15,7 +15,9 @@ import { ProfileEdit } from "../Components/ProfileComponents/ProfileEdit";
 import { AuthContext } from "../Contexts/UserAuth";
 export const Profile = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
-  const { logout } = useContext(AuthContext);
+  const { logout, userDetails } = useContext(AuthContext);
+
+  console.log(userDetails);
   return (
     <Box bg={"blackAlpha.50"} w="100%" mt="125px">
       <Box w={["full", "full", "95%", "90%", "80%", "80%"]} mx="auto" py="10px">
@@ -32,6 +34,7 @@ export const Profile = () => {
             mx="auto"
           >
             <VStack
+              mt={["15px", "15px", "15px", "0", "0", "0"]}
               bg="#008ecc"
               w="full"
               h="235px"
@@ -49,7 +52,9 @@ export const Profile = () => {
                   <Flex justify={"space-between"} align="center" w="full">
                     <Box h="58px" textAlign={"left"} m="0">
                       <Heading fontSize={20} color="white" lineHeight={"20px"}>
-                        Saroj Pahi
+                        {userDetails.fullname
+                          ? userDetails.fullname
+                          : userDetails.name}
                       </Heading>
                       <Text
                         fontSize={12}
@@ -57,14 +62,15 @@ export const Profile = () => {
                         color={"hsla(0,0%,100%,.4)"}
                         lineHeight="16px"
                       >
-                        sarojpahi@gmail.com
+                        {userDetails.email ? userDetails.email : "xxxx-xxxx"}
                       </Text>
                       <Text
                         fontSize={12}
                         color={"hsla(0,0%,100%,.4)"}
                         lineHeight="16px"
                       >
-                        +91-8249816465
+                        +91-
+                        {userDetails.mobile ? userDetails.mobile : "xxxx-xxxx"}
                       </Text>
                     </Box>
                     <Box
@@ -194,15 +200,28 @@ export const Profile = () => {
               </Flex>
               <Flex p="10px" h="full">
                 <VStack align={"flex-start"} gap={"10px"} w="full">
-                  <DetailBox text1={"Full Name"} text2={"Saroj Pahi"} />
-                  <DetailBox text1={"Email Id"} text2={"sarojpahi@gamil.com"} />
+                  <DetailBox
+                    text1={"Full Name"}
+                    text2={
+                      userDetails.fullname ? userDetails.fullname : "xxxx-xxxx"
+                    }
+                  />
+                  <DetailBox
+                    text1={"Email Id"}
+                    text2={userDetails.email ? userDetails.email : "xxxx-xxxx"}
+                  />
                 </VStack>
                 <VStack w="full" align={"flex-start"} gap={"10px"}>
-                  <DetailBox text1={"Mobile Number"} text2={"+91-8249816465"} />
+                  <DetailBox
+                    text1={"Mobile Number"}
+                    text2={`+91-${
+                      userDetails.mobile ? userDetails.mobile : "xxxx-xxxx"
+                    }`}
+                  />
                   <DetailBox
                     text1={"Default Address"}
                     text2={
-                      "Jitendra Kumar Pahi,Sawmil,Railway Phatak,Sundergarh, Odisha - 770031"
+                      userDetails.address ? userDetails.address : "xxxx-xxxx"
                     }
                   />
                 </VStack>

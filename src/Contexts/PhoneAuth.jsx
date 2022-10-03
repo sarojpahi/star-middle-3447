@@ -13,6 +13,8 @@ import { VscChevronRight } from "react-icons/vsc";
 import { useContext, useState } from "react";
 import { AuthContext } from "./UserAuth";
 import { useNavigate } from "react-router-dom";
+import { addUser, getUser } from "./crud";
+
 function validateNumber(value) {
   if (value === "") return false;
   if (value.length !== 10) {
@@ -21,17 +23,30 @@ function validateNumber(value) {
   if (value === 0) return true;
 }
 export const PhoneAuth = () => {
-  const [number, setNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [show, setShow] = useState(true);
-  const { setUpRecapta, user, setUser } = useContext(AuthContext);
+  const {
+    setUpRecapta,
+    user,
+    setUser,
+    number,
+    setNumber,
+    userDetails,
+    setUserDetails,
+  } = useContext(AuthContext);
   const [confirmObj, setConfrimObj] = useState();
   const navigate = useNavigate();
   const [takeName, setTakeName] = useState(false);
   const [name, setName] = useState("");
   const submitNumber = async () => {
     const phone = `+91${number}`;
+    setNumber(number);
     try {
+      const user = (await getUser(number)).data();
+      if (user.name) {
+        setName(user.name);
+        setUserDetails(user);
+      }
       const res = await setUpRecapta(phone);
       setConfrimObj(res);
       setShow(res ? false : true);
@@ -43,10 +58,16 @@ export const PhoneAuth = () => {
   const verifyOtp = async () => {
     try {
       await confirmObj.confirm(otp);
-      confirmObj.name ? navigate("/") : setTakeName(true);
+      name ? navigate("/") : setTakeName(true);
     } catch (error) {
       console.log(error);
     }
+  };
+  const handleUserData = async () => {
+    setUserDetails({ ...userDetails, name: name, mobile: number });
+    await addUser(userDetails, number);
+    setUser({ ...user, name: name });
+    navigate("/");
   };
   return (
     <>
@@ -125,10 +146,7 @@ export const PhoneAuth = () => {
         />
         <Box h="60px">
           <Button
-            onClick={() => {
-              setUser({ ...user, name: name });
-              navigate("/");
-            }}
+            onClick={handleUserData}
             bg={"#008ecc"}
             color="white"
             fontWeight={"bold"}
