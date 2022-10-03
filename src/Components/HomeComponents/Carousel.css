@@ -122,3 +122,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.fixed {
+  box-shadow: 0 4px 4px 0 rgb(51 62 72 / 10%), 0 4px 4px 0 rgb(51 62 72 / 10%);
+  background: #fff;
+}

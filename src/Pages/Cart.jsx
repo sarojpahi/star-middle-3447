@@ -22,7 +22,7 @@ export const Cart = () => {
   const { cartItems, clearCartItem } = useCartContext();
   if (cartItems.length === 0) {
     return (
-      <Box w="full" bg="blackAlpha.50">
+      <Box w="full" bg="blackAlpha.50" mt="130px">
         <Flex w="75%" mx="auto" pt="10px">
           <Flex w="60%" gap={"30px"} flexDirection="column">
             <Heading gap="4px" fontSize={"26px"}>
@@ -51,7 +51,7 @@ export const Cart = () => {
     );
   }
   return (
-    <Box w="full" bg="blackAlpha.50">
+    <Box w="full" bg="blackAlpha.50" mt="130px">
       <Flex w="75%" mx="auto" pt="10px">
         <Flex w="60%" gap={"30px"} flexDirection="column">
           <Heading gap="4px" fontSize={"26px"}>
