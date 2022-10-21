@@ -33,7 +33,6 @@ export const Login = () => {
           gap={[5, 5, 5, 10, 10, "80px"]}
         >
           <VStack
-            align={"flex-start"}
             mt="40px"
             w="full"
             px={["10px", "10px", "10px", "50px", "50px", 0]}

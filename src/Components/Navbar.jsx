@@ -102,7 +102,10 @@ export const Navbar = () => {
             <Link to={"customer/account"}>
               <HStack h="100%" color="white" cursor={"pointer"}>
                 <Icon as={BsPersonFill} w="28px" h="32px"></Icon>
-                <Text display={["none", "none", "none", "flex"]}>
+                <Text
+                  width={"max-content"}
+                  display={["none", "none", "none", "flex"]}
+                >
                   {userDetails && userDetails.name
                     ? userDetails.name
                     : "Sign in / Sign up"}
