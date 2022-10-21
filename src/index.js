@@ -10,12 +10,12 @@ import { CartContextProvide } from "./Contexts/CartContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ChakraProvider>
-    <BrowserRouter>
-      <CartContextProvide>
-        <UserAuthContextProvider>
+    <UserAuthContextProvider>
+      <BrowserRouter>
+        <CartContextProvide>
           <App />
-        </UserAuthContextProvider>
-      </CartContextProvide>
-    </BrowserRouter>
+        </CartContextProvide>
+      </BrowserRouter>
+    </UserAuthContextProvider>
   </ChakraProvider>
 );
