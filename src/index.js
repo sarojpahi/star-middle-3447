@@ -6,16 +6,18 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import { UserAuthContextProvider } from "./Contexts/UserAuth";
 import { CartContextProvide } from "./Contexts/CartContext";
+import ScrollToTop from "./Contexts/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ChakraProvider>
-    <UserAuthContextProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <UserAuthContextProvider>
         <CartContextProvide>
+          <ScrollToTop />
           <App />
         </CartContextProvide>
-      </BrowserRouter>
-    </UserAuthContextProvider>
+      </UserAuthContextProvider>
+    </BrowserRouter>
   </ChakraProvider>
 );
