@@ -43,7 +43,7 @@ export const PhoneAuth = () => {
     setNumber(number);
     try {
       const user = (await getUser(number)).data();
-      if (user.name) {
+      if (user?.name) {
         setName(user.name);
         setUserDetails(user);
       }

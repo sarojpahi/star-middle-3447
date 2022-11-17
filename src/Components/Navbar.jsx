@@ -25,18 +25,29 @@ import {
   Jewellery,
   PremiumFruits,
 } from "./NavComps/Menus";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Contexts/UserAuth";
 import { useCartContext } from "../Contexts/CartContext";
+import "./nav.css";
 export const Navbar = () => {
+  const [active, setActive] = useState(" ");
   const { cartItems } = useCartContext();
   const { isOpen, onToggle } = useDisclosure();
   const { userDetails } = useContext(AuthContext);
-
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+    return () => window.removeEventListener("scroll", stickNavbar);
+  }, []);
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 70 ? setActive("navbar") : setActive("");
+    }
+  };
   return (
     <Box
       w="full"
-      className="fixed"
+      className={active}
       position={"fixed"}
       top="0"
       left={0}

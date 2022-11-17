@@ -6,6 +6,7 @@ import {
   signInWithPhoneNumber,
 } from "firebase/auth";
 import { auth } from "./Firebase";
+import { useNavigate } from "react-router-dom";
 const initialDetail = {
   address: "",
   email: "",
@@ -15,6 +16,7 @@ const initialDetail = {
 };
 export const AuthContext = createContext();
 export const UserAuthContextProvider = ({ children }) => {
+  const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [userDetails, setUserDetails] = useState(initialDetail);
   const [number, setNumber] = useState("");
@@ -33,8 +35,11 @@ export const UserAuthContextProvider = ({ children }) => {
       setUser(currentuser);
     });
     return () => unsubscribe();
-  }, []);
-  const logout = () => signOut(auth);
+  }, [user]);
+  const logout = () => {
+    signOut(auth);
+    navigate("/");
+  };
   const value = {
     user,
     setUser,
