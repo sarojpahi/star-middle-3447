@@ -11,7 +11,6 @@ export const AllRouter = () => {
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/customer/account/login" element={<Login />}></Route>
-      <Route path="/checkout/cart" element={<Cart />}></Route>
       <Route
         path="/customer/account"
         element={
@@ -22,7 +21,14 @@ export const AllRouter = () => {
       ></Route>
       <Route path="/c/groceries" element={<Home />}></Route>
       <Route path="/c/homekitchen" element={<HomeKitchen />}></Route>
-      <Route path="/checkout/cart" element={<Cart />}></Route>
+      <Route
+        path="/checkout/cart"
+        element={
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        }
+      ></Route>
     </Routes>
   );
 };
