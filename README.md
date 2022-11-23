@@ -1,6 +1,6 @@
 # Jiomart
 
-### Jio Mart is online E-commerce website with wide vareity of items like Grocery, home needs and clothing for all gender groups.
+### It is one of the India's top E-commerce Website. It deals with a wide variety of products including groceries, fashion, electronics, etc.. .
 
 # Prerequisities
 
