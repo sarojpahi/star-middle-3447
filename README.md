@@ -42,6 +42,6 @@
 
 
 - How to work with React, ChakraUI and Firebase
-- How to authorize user through phone number verifying with OTP.
+- How to authenticate user through phone number verifying with OTP.
 - Global cart componets
 - CRUD operation
